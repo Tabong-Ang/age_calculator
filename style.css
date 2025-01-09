@@ -158,6 +158,9 @@ input[type="text"] + span + span  {
     color: var(--Light-red);
 }
 
+.line-submit {
+    position: relative;
+}
 
 button {
     position: absolute;
@@ -207,8 +210,9 @@ h1 > span {
         padding: 1rem;
     }
 
-    h1 {
-        font-size: 1.5rem;
+    h1,
+    h1 + span {
+        font-size: 3.5rem;
     }
 
     .input-category {
@@ -216,8 +220,8 @@ h1 > span {
     }
 
     button {
-        width: 15%;
-        top: 37.5%;
+        width: 18%;
+        top: -1.7rem;
         left: 40%;
     }
 

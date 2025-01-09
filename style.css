@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inconsolata:wght@200..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sofadi+One&family=Space+Grotesk:wght@300..700&display=swap');
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  --Purple: hsl(259, 100%, 65%);
+  --Light-red: hsl(0, 100%, 67%);
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+}
+
+html {
+    font-family: 'Poppins', serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--Light-grey);
+}
+
+
+main {
+    width: 40%; 
+    padding: 2rem 5rem 2rem 2rem;
+    border-radius: .85rem .85rem 8rem .85rem;
+    background: var(--White);
+}
+
+.input-category {
+    display: flex;
+    margin-bottom: 2rem;
+    padding-right: 5rem;
+    gap: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: .5rem;
+    text-transform: uppercase;
+    font-size: .7rem;
+    font-weight: 700;
+    color: var(--Smokey-grey);
+}
+
+input[type="text"] {
+    width: 100%;
+    height: 3rem;
+    border: 1px solid var(--Light-grey);
+    border-radius: .4rem;
+}
+
+input[type="text"]::placeholder {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+input[type="text"] + span:first-of-type {
+    position: relative;
+    display: block;
+    visibility: hidden;
+}  
+
+input[type="text"] + span::before {
+    content: "This field is required";
+    position: absolute;
+    color: var(--Light-red);
+    font-size: .6rem;
+    font-style: italic;
+}
+
+input[type="text"] + span + span  {
+    position: absolute;
+    font-size: .6rem;
+    color: var(--Light-red);
+}
+
+
+button {
+    position: absolute;
+    right: 33%;
+    top: 35%;
+    background: var(--Purple);
+    border-radius: 50%;
+    width: 5%;
+    padding: 1rem;
+    border-style: none;
+    cursor:grab;
+}
+
+.year-month-days {
+    display: flex;
+}
+
+h1 {
+    color: var(--Purple);
+}
+
+h1,
+h1 + span {
+    font-size: 4rem;
+    line-height: 4.5rem;
+    font-style: italic;
+    font-weight: 900;
+}
+
+h1 > span {
+    color: var(--Off-black);
+}
+
+.attribution {
+    font-size: 11px;
+    position: absolute;
+    bottom: 1rem;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+
+@media (max-width:48em) {
+    main {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .input-category {
+        padding: 1rem;
+    }
+
+    button {
+        width: 15%;
+        top: 40%;
+        left: 40%;
+    }
+
+    hr {
+        margin-bottom: 2rem;
+    }
+}

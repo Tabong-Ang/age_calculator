@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Age Calculator" />
+    <meta name="keywords" content="age, Calculator" />
+    <meta name="author" content="Tabong Philip" />
+    <link
+      rel="icon"
+      href="./images/155891814__1_-removebg-preview.png"
+      type="image/x-icon"
+    />
+    <title>Age Calculator App</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="input-category">
+        <div class="day-input">
+          <label for="day">Day</label>
+          <input type="text" max="31" name="day" id="day" placeholder=" DD" />
+          <span class="error"></span>
+          <span class="error-2"></span>
+        </div>
+        <div class="month-input">
+          <label for="month">Month</label>
+          <input type="text" name="month" id="month" placeholder=" MM" />
+          <span class="error"></span>
+          <span class="error-2"></span>
+        </div>
+        <div class="year-input">
+          <label for="year">Year</label>
+          <input type="text" name="year" id="year" placeholder=" YYYY" />
+          <span class="error"></span>
+          <span class="error-2"></span>
+        </div>
+      </div>
+      <div class="line-submit">
+        <hr />
+        <button id="submit">
+          <img id="image" src="./images/icon-arrow.svg" alt="" />
+        </button>
+      </div>
+      <div class="results">
+        <div class="year-month-days">
+          <h1 class="years">- -</h1>
+          <span>years</span>
+        </div>
+        <div class="year-month-days">
+          <h1 class="months">- -</h1>
+          <span>months</span>
+        </div>
+        <div class="year-month-days">
+          <h1 class="days">- -</h1>
+          <span>days</span>
+        </div>
+      </div>
+    </main>
+    <footer class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+        Coded by
+        <a href="https://myportfolio-theta-plum.vercel.app/#">Tabong Philip</a>.
+    <script src="./script.js"></script>
+  </body>
+</html>

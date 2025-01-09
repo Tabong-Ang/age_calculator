@@ -164,11 +164,11 @@ input[type="text"] + span + span  {
 
 button {
     position: absolute;
-    right: 33%;
-    top: 35%;
+    right: 0;
+    top: -2rem;
     background: var(--Purple);
     border-radius: 50%;
-    width: 5%;
+    width: 15%;
     padding: 1rem;
     border-style: none;
     cursor:grab;

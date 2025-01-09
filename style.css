@@ -212,8 +212,14 @@ h1 > span {
 
     h1,
     h1 + span {
-        font-size: 3.5rem;
+        font-size: 3.1rem;
+    } 
+
+    input[type="text"] + span + span,
+    input[type="text"] + span::before {
+        font-size: .4rem;
     }
+
 
     .input-category {
         padding: 1rem;
